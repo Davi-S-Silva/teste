@@ -37,7 +37,8 @@ echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined" >> $CONFIG_FILE_NAME
 sudo a2dissite 000-default.conf
 sudo a2ensite app.conf
 sudo a2enmod rewrite
-sudo /etc/init.d/apache2 restart
+# sudo /etc/init.d/apache2 restart
+sudo systemctl restart apache2
 cd $WEBSITE_DIR
 sudo cp .env.example .env
 sudo chown -R $WEB_USER:$WEB_USER .
@@ -47,7 +48,9 @@ sudo chmod -R 777 storage/*
 sudo chown -R $WEB_USER_DATA:$WEB_USER_DATA storage/*
 sudo mkdir vendor
 sudo chmod -R 777 vendor
-composer install --no-interaction
+composer install 
+composer update
 php artisan key:generate
-php artisan migrate --no-interaction
-sudo /etc/init.d/apache2 restart
+php artisan migrate
+sudo systemctl restart apache2
+# sudo /etc/init.d/apache2 restart
