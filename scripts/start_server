@@ -36,6 +36,7 @@ echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined" >> $CONFIG_FILE_NAME
 
 sudo a2dissite 000-default.conf
 sudo a2ensite app.conf
+# sudo systemctl restart apache2
 sudo a2enmod rewrite
 # sudo /etc/init.d/apache2 restart
 sudo systemctl restart apache2
