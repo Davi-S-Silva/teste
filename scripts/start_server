@@ -5,7 +5,7 @@ export WEBSITE_DIR="/var/www/html"
 
 export SERVER_ADMIN="salestransportes@gmail.com"
 
-export WEB_USER="ubuntu"
+export WEB_USER="root"
 
 export WEB_USER_DATA="www-data"
 
