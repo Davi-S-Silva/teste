@@ -8,3 +8,4 @@ sudo apt install -y apache2 php8.3 composer
 sudo apt-get install -y $PHP_VERSION-mysql $PHP_VERSION-zip 
 sudo apt-get install -y $PHP_VERSION-gd $PHP_VERSION-mbstring  $PHP_VERSION-xml $PHP_VERSION-gd
 sudo apt install curl -y
+
