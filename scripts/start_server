@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /var/www/html
 sudo composer install 
 # sudo composer update
 php artisan key:generate

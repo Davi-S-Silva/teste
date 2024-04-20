@@ -1,7 +1,8 @@
 #!/bin/bash
 export WEB_USER_DATA="www-data"
 
-cd $WEBSITE_DIR
+cd /var/www/html
+
 sudo cp .env.example .env
 sudo mkdir vendor
 sudo chown -R $WEB_USER:$WEB_USER .
