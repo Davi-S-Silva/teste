@@ -39,8 +39,8 @@ cd /etc/apache2/sites-available
 sudo cp 000-default.conf app.conf
 
 echo "<VirtualHost *:80>" >> $CONFIG_FILE_NAME
-echo "  ServerAdmin $SERVER_ADMIN" >> $CONFIG_FILE_NAME
-echo "  ServerName $SERVER_NAME" >> $CONFIG_FILE_NAME
+echo "  ServerAdmin http://$SERVER_ADMIN" >> $CONFIG_FILE_NAME
+echo "  ServerName http://$SERVER_NAME" >> $CONFIG_FILE_NAME
 echo "  ServerAlias $SERVER_ALIAS" >> $CONFIG_FILE_NAME
 echo "  DocumentRoot $WEBSITE_DIR/public" >> $CONFIG_FILE_NAME
 echo "  <Directory $WEBSITE_DIR>" >> $CONFIG_FILE_NAME
