@@ -48,8 +48,8 @@ sudo chmod -R 777 storage/*
 sudo chown -R $WEB_USER_DATA:$WEB_USER_DATA storage/*
 sudo mkdir vendor
 sudo chmod -R 777 vendor
-composer install 
-composer update
+sudo composer install 
+sudo composer update
 php artisan key:generate
 php artisan migrate
 sudo systemctl restart apache2
