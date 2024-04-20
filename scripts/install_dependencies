@@ -28,6 +28,10 @@ php -r "unlink('composer-setup.php');"
 
 sudo mv composer.phar /usr/local/bin/composer
 
+cd /var/www/html
+
+sudo rm -r *
+
 
 
 
