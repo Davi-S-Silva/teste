@@ -20,6 +20,11 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 
+# apt install git-crypt
+# apt-get install haveged rng-tools
+# gpg --gen-key
+
+
 export CONFIG_FILE_NAME="app.conf"
 
 export WEBSITE_DIR="/var/www/html"
