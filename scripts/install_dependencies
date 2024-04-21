@@ -33,11 +33,11 @@ export SERVER_ADMIN="salestransportes@gmail.com"
 
 export WEB_USER="root"
 
-export SERVER_NAME=http://saasportal.com.br
-# export SERVER_NAME=$(wget -qO- ifconfig.me/ip)
+# export SERVER_NAME=http://saasportal.com.br
+export SERVER_NAME=$(wget -qO- ifconfig.me/ip)
 
-export SERVER_ALIAS=http://www.saasportal.com.br
-# export SERVER_ALIAS=$(wget -qO- ifconfig.me/ip)
+# export SERVER_ALIAS=http://www.saasportal.com.br
+export SERVER_ALIAS=$(wget -qO- ifconfig.me/ip)
 
 sudo systemctl start apache2
 
