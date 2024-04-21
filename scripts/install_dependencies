@@ -20,6 +20,7 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 
+sudo apt install npm
 # apt install git-crypt
 # apt-get install haveged rng-tools
 # gpg --gen-key
