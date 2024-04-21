@@ -44,6 +44,7 @@ sudo systemctl start apache2
 cd /etc/apache2/sites-available
 
 # sudo cp 000-default.conf app.conf
+sudo rm -r /etc/apache2/sites-available/app.conf
 sudo touch app.conf
 sudo chmod 666 app.conf
 
