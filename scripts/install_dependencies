@@ -29,7 +29,7 @@ export CONFIG_FILE_NAME="app.conf"
 
 export WEBSITE_DIR="/var/www/html"
 
-export SERVER_ADMIN="salestransportes@gmail.com"
+export SERVER_ADMIN="saasportalweb@gmail.com"
 
 export WEB_USER="root"
 
@@ -43,12 +43,14 @@ sudo systemctl start apache2
 
 cd /etc/apache2/sites-available
 
-sudo cp 000-default.conf app.conf
+# sudo cp 000-default.conf app.conf
+sudo touch app.conf
+sudo chmod 666 app.conf
 
 echo "<VirtualHost *:80>" >> $CONFIG_FILE_NAME
-echo "  ServerAdmin http://$SERVER_ADMIN" >> $CONFIG_FILE_NAME
-echo "  ServerName http://$SERVER_NAME" >> $CONFIG_FILE_NAME
-echo "  ServerAlias $SERVER_ALIAS" >> $CONFIG_FILE_NAME
+echo "  ServerAdmin $SERVER_ADMIN" >> $CONFIG_FILE_NAME
+echo "  ServerName http://$SERVER_NAME/" >> $CONFIG_FILE_NAME
+echo "  ServerAlias http://$SERVER_ALIAS/" >> $CONFIG_FILE_NAME
 echo "  DocumentRoot $WEBSITE_DIR/public" >> $CONFIG_FILE_NAME
 echo "  <Directory $WEBSITE_DIR>" >> $CONFIG_FILE_NAME
 echo "    Require all granted" >> $CONFIG_FILE_NAME
@@ -57,8 +59,8 @@ echo "    Options Indexes Multiviews FollowSymLinks" >> $CONFIG_FILE_NAME
 echo "  </Directory>" >> $CONFIG_FILE_NAME
 echo "</VirtualHost>" >> $CONFIG_FILE_NAME
 
-echo "  ErrorLog ${APACHE_LOG_DIR}/error.log" >> $CONFIG_FILE_NAME
-echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined" >> $CONFIG_FILE_NAME
+# echo "  ErrorLog ${APACHE_LOG_DIR}/error.log" >> $CONFIG_FILE_NAME
+# echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined" >> $CONFIG_FILE_NAME
 
 sudo a2dissite 000-default.conf
 sudo a2ensite app.conf
