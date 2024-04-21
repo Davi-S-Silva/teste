@@ -40,7 +40,6 @@ export SERVER_NAME=$(wget -qO- ifconfig.me/ip)
 export SERVER_ALIAS=$(wget -qO- ifconfig.me/ip)
 
 sudo systemctl start apache2
-
 cd /etc/apache2/sites-available
 
 # sudo cp 000-default.conf app.conf
@@ -60,18 +59,10 @@ echo "    Options Indexes Multiviews FollowSymLinks" >> $CONFIG_FILE_NAME
 echo "  </Directory>" >> $CONFIG_FILE_NAME
 echo "</VirtualHost>" >> $CONFIG_FILE_NAME
 
-# echo "  ErrorLog ${APACHE_LOG_DIR}/error.log" >> $CONFIG_FILE_NAME
-# echo "  CustomLog ${APACHE_LOG_DIR}/access.log combined" >> $CONFIG_FILE_NAME
-
 sudo a2dissite 000-default.conf
 sudo a2ensite app.conf
-# sudo systemctl restart apache2
 sudo a2enmod rewrite
-# sudo /etc/init.d/apache2 restart
-# sudo systemctl restart apache2
-# sudo service apache2 restart
-# sudo systemctl restart apache2
-# sudo /etc/init.d/apache2 restart
+
 
 
 
