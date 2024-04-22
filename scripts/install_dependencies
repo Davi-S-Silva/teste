@@ -35,7 +35,6 @@ export WEBSITE_DIR="/var/www/html"
 
 export SERVER_ADMIN="saasportalweb@gmail.com"
 
-export WEB_USER="ubuntu"
 
 # export SERVER_NAME=http://saasportal.com.br
 export SERVER_NAME=$(wget -qO- ifconfig.me/ip)

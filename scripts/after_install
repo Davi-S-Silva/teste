@@ -1,6 +1,8 @@
 #!/bin/bash
 export WEB_USER_DATA="www-data"
 
+export WEB_USER="ubuntu"
+
 cd /var/www/html
 
 sudo cp .env.example .env
@@ -16,5 +18,5 @@ sudo chmod -R 777 bootstrap/*
 sudo chown -R $WEB_USER_DATA:$WEB_USER_DATA storage/*
 sudo chmod -R 777 vendor
 
-sudo chmod -R 777 /var/www/html/package.json
-sudo chmod -R 777 /var/www/html/vite.config.js
+# sudo chmod -R 777 /var/www/html/package.json
+# sudo chmod -R 777 /var/www/html/vite.config.js
