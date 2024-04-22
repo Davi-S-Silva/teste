@@ -17,3 +17,4 @@ sudo chown -R $WEB_USER_DATA:$WEB_USER_DATA storage/*
 sudo chmod -R 777 vendor
 
 sudo chmod -R 777 /var/www/html/package.json
+sudo chmod -R 777 /var/www/html/vite.config.js

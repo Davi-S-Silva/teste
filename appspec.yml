@@ -7,17 +7,17 @@ hooks:
   BeforeInstall:
     - location: scripts/install_dependencies
       timeout: 120
-      runas: root  
+      runas: ubuntu  
   AfterInstall:
     - location: scripts/after_install
       timeout: 120
-      runas: root
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/start_server
       timeout: 120
-      runas: root
+      runas: ubuntu
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 120
-      runas: root
+      runas: ubuntu
 
